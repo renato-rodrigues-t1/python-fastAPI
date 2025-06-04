@@ -22,7 +22,7 @@ def read_root():
 
 @app.get("/users")
 def get_users():
-    return [{"name": "Alice", "age": 30}, {"name": "Bob", "age": 25}]
+    return [{"name": "Alice", "age": 30}, {"name": "Bob", "age": 25}, {"name": "Charlie", "age": 35}, {"name": "David", "age": 28}, {"name": "Eve", "age": 22}, {"name": "Frank", "age": 40}]
 
 @app.get("/greet/{username}")
 def greet_user(username: str):
@@ -30,4 +30,4 @@ def greet_user(username: str):
 
 @app.post("/user")
 def create_user(user: User):
-    return {"message": f"User {user.name} is {user.age} years old"}
+    return {"message": f"Created User {user.name} with {user.age} years old"}
